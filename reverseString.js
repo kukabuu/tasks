@@ -18,5 +18,13 @@ var reverseString = function(s) {
 	return s;
 };
 
+function revStr(str) {
+	let arr = [...str];
+	let newArr = arr.map((_, i, arr) => {
+		return arr[arr.length - 1 - i];
+	});
+	return newArr.join("");
+}
+
 console.log(reverseString(["h", "e", "l", "l", "o"]));
 console.log(reverseString(["H", "a", "n", "n", "a", "h"]));
