@@ -94,14 +94,14 @@ class BST {
 					return node.right;
 				}
 				if (node.right === null) {
-					return node.right;
+					return node.left;
 				}
 				let tempNode = node.right;
 				while (tempNode.left !== null) {
 					tempNode = tempNode.left;
 				}
-				node.data = templeNode.data;
-				node.right = removeNode(node.right, templeNode.data);
+				node.data = tempNode.data;
+				node.right = removeNode(node.right, tempNode.data);
 				return node;
 			} else if (data < node.data) {
 				node.left = removeNode(node.left, data);
