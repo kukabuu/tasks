@@ -46,6 +46,34 @@ var isValid = function(s) {
   else return true;
 };
 
+//Solution 2:
+const check = str => {
+  let stack = [];
+  const breketsMapping = {
+    "}": "{",
+    "]": "[",
+    ")": "("
+  };
+
+  const breketsStr = str.replace(/^\[\]\(\)\{\}/gi, "");
+
+  for (let i = 0; i < breketsStr.length; i++) {
+    let isItOpenBreket = Object.values(breketsMapping).includes(breketsStr[i]);
+    if (isItOpenBreket) {
+      stack.push(breketsStr[i]);
+    }
+
+    let isItCorrectClose =
+      breketsMapping[breketsStr[i]] === stack[stack.length - 1];
+    if (isItCorrectClose) {
+      stack.pop(breketsStr[i]);
+    }
+  }
+  return !stack.length;
+};
+
+console.log(check("{[}]")); // true, false
+
 console.log(isValid("[()]"));
 console.log(isValid("()"));
 console.log(isValid(")"));
