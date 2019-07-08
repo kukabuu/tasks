@@ -15,4 +15,30 @@ function getSomeMagic(str) {
 		.join("");
 }
 
+// getAnagrams('нос', 'Сон', 'снедь', 'днесь'));
+// [["нос", "сон"], ["днесь", "снедь"]]
 
+function getAnagrams() {
+	const isAnagram = (str1, str2) => {
+		const sortStr = str =>
+			str
+				.toLowerCase()
+				.split("")
+				.sort()
+				.join("");
+		return sortStr(str1) === sortStr(str2);
+	};
+	let result = [];
+	let args = [].slice.call(arguments);
+	while (args.length) {
+		let word = args.pop();
+		let anagrams = args.filter(item => isAnagram(word, item));
+		if (anagrams.length) {
+			args = args.filter(item => !anagrams.includes(item));
+		}
+		result.push([word, ...anagrams]);
+	}
+	return result;
+}
+
+console.log(getAnagrams("нос", "Сон", "снедь", "днесь"));
