@@ -1,0 +1,23 @@
+{
+  "name": "jsalgorithms",
+  "version": "1.0.0",
+  "description": "My options for solving tasks on algorithms and data structures",
+  "main": "",
+  "dependencies": {
+    "eslint": "^6.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kukabuu/JSAlgorithms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kukabuu/JSAlgorithms/issues"
+  },
+  "homepage": "https://github.com/kukabuu/JSAlgorithms#readme"
+}
