@@ -1,7 +1,7 @@
 // loop : The time complexity for this implementation is O(n)
 
 const fibLoop = (num) => {
-	let prev = 0,
+	let prev = 0, 
 			curr = 1;
 
 	while (num > 1) {
