@@ -1,7 +1,7 @@
 /**
  * There are n cans of water, but not all of them are completely filled with water.
  * These cans may be consolidated. Determine the minimum number of cans needed 
- * to cotain the required amount of water.
+ * to contain the required amount of water.
  * 
  * input: total = [3, 5, 3, 5, 5], used = [3, 2, 1, 3, 1]
  * output: 2
